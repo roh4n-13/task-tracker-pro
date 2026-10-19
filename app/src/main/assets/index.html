@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PERSONAL WORKSPACE</p>
+      <h1>Task Tracker<span>.</span></h1>
+    </div>
+    <button id="syncBtn" class="icon-btn" aria-label="Sync">↻</button>
+  </header>
+
+  <main>
+    <section class="status-card">
+      <div>
+        <p class="eyebrow">YOUR PROGRESS</p>
+        <h2 id="summaryTitle">Stay on track.</h2>
+        <p id="connectionStatus">Connecting to Google Sheets…</p>
+      </div>
+      <div class="stats">
+        <div><strong id="activeCount">0</strong><span>Active</span></div>
+        <div><strong id="doneCount">0</strong><span>Completed</span></div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="tabs">
+        <button class="tab active" data-view="active">Active</button>
+        <button class="tab" data-view="completed">Completed</button>
+      </div>
+      <button id="addBtn" class="primary">+ New task</button>
+    </div>
+
+    <section id="editor" class="panel hidden">
+      <div class="panel-heading">
+        <div><p class="eyebrow">TASK DETAILS</p><h2 id="formTitle">New task</h2></div>
+        <button id="cancelBtn" class="icon-btn">×</button>
+      </div>
+      <form id="taskForm">
+        <div id="fields" class="fields"></div>
+        <div class="form-actions">
+          <button type="button" id="cancelBtn2" class="secondary">Cancel</button>
+          <button type="submit" id="saveBtn" class="primary">Save task</button>
+        </div>
+      </form>
+    </section>
+
+    <div class="list-heading">
+      <h2 id="listTitle">Your tasks</h2>
+      <span id="taskCount">0 tasks</span>
+    </div>
+    <section id="taskList" class="task-list"></section>
+    <section id="emptyState" class="empty hidden">
+      <div class="empty-icon">✓</div>
+      <h2>All clear.</h2>
+      <p>No tasks here yet. Add a task to get started.</p>
+    </section>
+
+    <footer>Made for focus. Synced with Google Sheets.</footer>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.TaskTracker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#1976d2</item>
+        <item name="colorPrimaryDark">#115293</item>
+        <item name="colorAccent">#1976d2</item>
+        <item name="android:windowBackground">#f4f6f9</item>
+    </style>
+</resources>\n

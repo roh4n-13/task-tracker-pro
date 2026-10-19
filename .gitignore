@@ -1,0 +1,9 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures\n
+# Keep app secrets out of GitHub
+app/src/main/assets/app.js
