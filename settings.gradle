@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "TaskTracker"
-include ':app'\n
+include ':app'
